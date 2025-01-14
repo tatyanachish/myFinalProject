@@ -8,7 +8,7 @@ const Cart = () => {
     return(
         <div>
             <p><strong>Your cart</strong></p>
-            <img src={cart} width='70px'/>
+            <img src={cart} width='70px' alt=' '/>
             <p><strong>Total: {totalPrice}$</strong></p>
             {cartItems.map(cartItem => <CartItems cartItem={cartItem} /> )}           
         </div>
