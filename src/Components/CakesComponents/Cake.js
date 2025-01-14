@@ -9,7 +9,7 @@ const Cake = ({cake}) => {
     return(
         <div>
             <p><strong>{cake.name}</strong></p>            
-            <img src={`${cake.img}.jpg`} alt='photo' width='200px'/>
+            <img src={`${cake.img}.jpg`} alt=' ' width='200px'/>
             <p>$: {cake.price}</p>
             <ChangeQuantity quantity={quantity} setQuantity={setQuantity}/>
             <button onClick={()=>{dispatch(addItemToCart({cake,quantity}))}}>ADD TO CART</button>
