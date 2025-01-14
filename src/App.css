@@ -1,6 +1,12 @@
 body {
     background-color: #EFCED7;
 }
+.App {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
 .headline {
     display: flex;
     flex-direction: column;
@@ -8,28 +14,61 @@ body {
 }
 h2{
     font-family: "Ingrid Darling", cursive;
-    font-size: 60px;
+    font-size: 50px;
     color: #B60071;
 }
 h3{
     font-family: "Imprima", sans-serif;
-    font-weight: 400;
+    font-size: 30px;
     font-style: normal;
-    color: #B60071;
+    color: #B60071;   
 }
 .container {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-left: 100px;
+    margin-right: 20px;
+}
+.partCategory,.partCakes{
+    display: flex;
+    text-align: center;
+    flex: 3;
+}
+.partCart {
+    display: flex;
+    justify-content: flex-start;
+    flex: 2;   
+}
+p {
+    color: #B60071; 
 }
 .categoryButtonSelected{
-    background-color: chocolate;
+    background-color: #FFAAAA;
     cursor: pointer;
     margin: 5px;
     padding: 5 px;
+    font-weight: bold;
 }
 .categoryButton:hover {
     background-color: #fdebfd;
-
+} 
+.question{    
+    font-family: "Imprima", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #B60071;     
 }
+button{
+    background-color: #FFAAAA;
+    border: 1px solid;
+    color: #B60071;
+}
+@media all and (max-width: 500px){
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 
 

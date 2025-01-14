@@ -1,16 +1,16 @@
 import { useSelector } from 'react-redux';
 import cart from './cart.png';
 import CartItems from './CartItem';
-import { getCartItems } from '../../Redux/cartSlice';
+import { getCartItems, getTotalPrice } from '../../Redux/cartSlice';
 const Cart = () => {
-    const cartItems = useSelector(getCartItems)
+    const cartItems = useSelector(getCartItems);
+    const totalPrice = useSelector(getTotalPrice)
     return(
         <div>
-            <h3>Your cart</h3>
+            <p><strong>Your cart</strong></p>
             <img src={cart} width='70px'/>
-            {cartItems.map(cartItem => <CartItems cartItem={cartItem} /> )}
-            <CartItems/>
-            
+            <p><strong>Total: {totalPrice}$</strong></p>
+            {cartItems.map(cartItem => <CartItems cartItem={cartItem} /> )}           
         </div>
     )
 }

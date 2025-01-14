@@ -6,10 +6,9 @@ const Filter = ({category}) => {
     const dispatch = useDispatch();
     return(          
         <div>            
-            <h3 className={selectedCategory === category ? 'categoryButtonSelected' : 'categoryButton'}
-            onClick={()=>{dispatch(filterCategory(category))}}>{category}</h3>
+            <p className={selectedCategory === category ? 'categoryButtonSelected' : 'categoryButton'} 
+            onClick={()=>{dispatch(filterCategory(category))}}>{category}</p>
         </div>
-        
-    )
+        )
 }
 export default Filter;
