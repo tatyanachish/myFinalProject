@@ -5,7 +5,7 @@ const AllCategories = () => {
         <div>
             <p className="question">WHAT KIND OF BAKED DO YOU LIKE?</p>
             {['PIE','BREAD','CAKE','CUPCAKE','WEDDING CAKE','ALL']
-            .map(category =><Filter category={category}/>)}
+            .map(category =><Filter key={category} category={category}/>)}
         </div>
     )
 }
