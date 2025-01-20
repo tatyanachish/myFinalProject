@@ -12,7 +12,7 @@ const Cakes = () => {
                 if (selectedCategory === 'ALL') return true;
                 return selectedCategory === cake.category
             })
-            .map(cake => <Cake cake={cake}/>)}            
+            .map(cake => <Cake key={cake.id} cake={cake}/>)}            
         </div>
     )
 }
