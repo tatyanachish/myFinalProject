@@ -63,6 +63,11 @@ button{
     border: 1px solid;
     color: #B60071;
 }
+@media all and (max-width: 800px){
+    .container{
+        margin-left: 30px;
+    }
+}
 @media all and (max-width: 500px){
     .container{
         flex-direction: column;
